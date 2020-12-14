@@ -3,27 +3,51 @@ import { StyleSheet,StatusBar, Text, View,TextInput, Button, SafeAreaView, Platf
 import {useDimensions, useDeviceOrientation} from '@react-native-community/hooks';
 
 export default function App() {
-  console.log(useDimensions(), useDeviceOrientation());
-
+  
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={{
+      backgroundColor:"#fff",
+      flex:1,
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
+      
+    }}>
+
       <View style={{
-        backgroundColor: 'dodgerblue',
-        width: '100%',
-        height: 70
-      }}>
-        <Text>Hello Lisa</Text>
+      backgroundColor:"dodgerblue",
+      //flex:1,
+      width: 100,
+      //flexShrink: 1,
+      height: 100,
+      //alignSelf: "flex-start",
+    }}>
       </View>
-    </SafeAreaView>
+
+      <View style={{
+      backgroundColor:"gold",
+      //flex:1,
+      width: 100,
+      height: 100,
+      top: 20,
+      left: 20,
+      position: "relative"
+    }}>
+      </View>
+
+      <View style={{
+      backgroundColor:"tomato",
+      //flex:1,
+      width: 100,
+      height: 100,
+    }}>
+      </View>
+
+     
+
+    </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container:{
-    flex: 1,
-    backgroundColor: '#fff',
-    paddingTop: Platform.OS 
-      === "android" ? StatusBar.currentHeight : 0,
-  }
-});
+
 
